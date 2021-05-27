@@ -11,7 +11,7 @@ const app: Application = express()
 app.use(morgan('short'))
 // error handler middleware
 app.use(errorMiddleware)
-
+// add routing for /api path
 app.use('/api', routes)
 
 export default app

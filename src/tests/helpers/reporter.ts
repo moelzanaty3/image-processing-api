@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { DisplayProcessor, SpecReporter, StacktraceOption } from 'jasmine-spec-reporter'
 import SuiteInfo = jasmine.SuiteInfo
 
