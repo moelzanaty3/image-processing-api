@@ -38,11 +38,21 @@ Here, I will show you how to run the test and also how to check that our code re
 
 ## Endpoint
 
-### `/api/images/?width=<width>&height=<height>?image=<image_name>`
+### `/api/images/preview/?filename=<image_name>`
 
 Method: `get`
-URL Params: `height` and `width` - the height or width of the image in pixels (default is 200px, optional)
-Query Param: `filename` - the specific image you are requesting (optional).
+URL Params: `height` and `width` - the height or width of the image in pixels
+Query Param: `filename` - the specific image you are requesting.
+
+    For example: `localhost:3000/api/images/preview/?filename=fjord`
+
+### `/api/images/resize/?width=<width>&height=<height>&filename=<image_name>`
+
+Method: `get`
+URL Params: `height` and `width` - the height or width of the image in pixels
+Query Param: `filename` - the specific image you are requesting.
+
+    For example: `localhost:3000/api/images/resize/?width=300&height=300&filename=fjord`
 
 #### Available Image options
 

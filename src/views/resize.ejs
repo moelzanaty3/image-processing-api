@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Image Processing API</title>
+</head>
+
+<body>
+    <% if (thumbnail) { %>
+        <!-- Show Thumbnail -->
+        <img src="http://localhost:3000/public/images/thumbnails/<%= thumbnail %>" alt="resize-<%= thumbnail %>"
+            width="<%= width %>" height="<%= height %>" />
+        <% } %>
+</body>
+
+</html>

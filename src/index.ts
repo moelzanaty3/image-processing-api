@@ -1,5 +1,8 @@
+import * as dotenv from 'dotenv'
 import app from './app'
-import { PORT } from './constants'
+
+dotenv.config()
+const PORT = process.env.PORT || 3000
 
 // start express server
 app.listen(PORT, () => {
