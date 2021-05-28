@@ -1,6 +1,5 @@
 import app from './app'
-
-const PORT: number = 3000
+import { PORT } from './constants'
 
 // start express server
 app.listen(PORT, () => {
