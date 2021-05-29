@@ -9,7 +9,7 @@ import errorMiddleware from './middleware/error.middleware'
 // create an instance server
 const app: Application = express()
 // add middleware to for static files
-app.use('/public', express.static(path.join(__dirname, 'public')))
+app.use('/images', express.static(path.join(__dirname, 'images')))
 // set up template engine and set the directory
 app.set('view engine', 'ejs')
 app.set('views', path.resolve(__dirname, 'views'))

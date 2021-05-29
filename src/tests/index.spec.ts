@@ -7,10 +7,18 @@ import app from '../app'
 const request = supertest(app)
 
 describe('Test endpoint response', () => {
-  it('Gets the api/images endpoint', async () => {
-    const response = await request.get('/api/images?filename=palmtunnel&width=200&height=200')
+  it('Gets the api/images/preview endpoint', async () => {
+    const response = await request.get('/api/images/preview/?filename=fjord')
     expect(response.status).toBe(200)
   })
+
+  it('Gets the api/images/resize endpoint', async () => {
+    const response = await request.get(
+      '/api/images/resize/?width=200&height=200&filename=palmtunnel'
+    )
+    expect(response.status).toBe(200)
+  })
+
   it('Images by second time properties should exist', () => {
     expect(fs.existsSync(`${IMAGE_OUTPUT_DIR_PATH}/palmtunnel_200_200.jpg`)).toBeTruthy()
   })

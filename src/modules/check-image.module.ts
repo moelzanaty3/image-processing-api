@@ -7,7 +7,6 @@ const checkIfImagesExist = async (
   filename: string
 ): Promise<boolean> => {
   const outputImagePath = `${IMAGE_OUTPUT_DIR_PATH}/${filename}_${width}_${height}.jpg`
-  console.log(outputImagePath)
   try {
     // check if the folder thumbnails exists, if not create it.
     await fs.ensureDir(IMAGE_OUTPUT_DIR_PATH)
